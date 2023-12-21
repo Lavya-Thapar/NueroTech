@@ -3,9 +3,12 @@
 /* Layout */
 
 .mouth {
-  width: 60%;
-  height: 30px;
-  background-color: red;
+  width: 20%;
+  height: 10px;
+  border-bottom: 5px solid black;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+
 }
 
 /* Main Styling */
