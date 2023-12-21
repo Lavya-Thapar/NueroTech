@@ -1,0 +1,36 @@
+/* Styles meant for eyes and eyebrows */
+
+/* Layout */
+
+.vision {
+  background-color: sandybrown;
+  width: 80%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.left,
+.right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Main Styling */
+
+.eyebrow {
+  background-color: black;
+  width: 60px;
+  height: 20px;
+}
+
+.eye {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+}
