@@ -30,10 +30,12 @@
 
 .left-eyebrow {
   border-top-left-radius: 100%;
+  transition: 0.4s all;
 }
 
 .right-eyebrow {
   border-top-right-radius: 100%;
+  transition: 0.4s all;
 }
 
 .eye {
@@ -117,4 +119,65 @@
   top: -6px;
   left: -5px;
   z-index: 4;
+  transition: 0.4s all;
 }
+.shut {
+  width: 70px;
+  height: 90px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  overflow: hidden;
+}
+.face.eyes-shut .eyelash {
+  transform: rotate(-25deg) translateY(50%);
+   /* Adjust the rotation when eyes are shut */
+   transition: 0.4s all;
+}
+.face.eyes-shut .left-eyebrow {
+  transform: translateY(5px); /* Adjust the vertical position when eyes are shut */
+}
+
+.face.eyes-shut .right-eyebrow {
+  transform: translateY(5px); /* Adjust the vertical position when eyes are shut */
+}
+.face.eyes-shut .left-eye,
+.face.eyes-shut .right-eye {
+  border-top: none; /* Remove the upper half black border when eyes are shut */
+}
+.shut span {
+  display: block;
+  width: 100%;
+  height: 0%; /* Set initial height to cover the eye */
+  background-color: rgba(251, 215, 181); /* Set initial color to match the face */
+  border-radius: 0 0 60% 60%;
+  transition: 0.4s all;
+  border-bottom: 5px solid black;
+}
+@keyframes blink {
+  0% {
+    height: 20%;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 20%;
+  }
+}
+
+.left-eye:hover .shut span,
+.right-eye:hover .shut span {
+  background-color: rgba(251, 215, 181); /* Change the color on hover */
+  height: 100%; /* Adjust the height during hover */
+}
+
+
+
