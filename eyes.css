@@ -3,7 +3,7 @@
 /* Layout */
 
 .vision {
-
+  margin-top: 20px;
   width: 80%;
   height: 120px;
   display: flex;
@@ -11,9 +11,8 @@
   justify-content: space-around;
 }
 
-
 .left,
-.right{
+.right {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,51 +37,84 @@
 }
 
 .eye {
-  width: 80px;
+  width: 70px;
   height: 90px;
-  background-color: white;
+  background-color: rgba(245, 245, 245);
+  border-top: 5px solid black;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+
+.left-eye {
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 80%;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.right-eye {
   border-top-left-radius: 100%;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 80%;
-  border-bottom-right-radius: 80%;
-  position: relative;
-  overflow: hidden;
+  border-bottom-right-radius: 100%;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
 }
 
 .pupil {
-  width: 60px;
+  width: 55px;
   height: 80px;
   background-color: black;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.left-pupil {
   border-top-left-radius: 100%;
+  border-top-right-radius: 80%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 80%;
+}
+
+.right-pupil {
+  border-top-left-radius: 80%;
   border-top-right-radius: 100%;
-  border-bottom-left-radius: 90%;
-  border-bottom-right-radius: 90%;
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 100%;
 }
 
 .inner-pupil {
   background-color: white;
-  width: 20px;
-  height: 4s0px;
+  width: 15px;
+  height: 25px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 45%;
+  z-index: 2;
   transform: translate(-50%, -50%);
   border-radius: 100%;
 }
 
-.shut {
-  background-color: salmon;
-  width: 100px;
-  height: 0px;
+.left-inner-pupil {
+  left: 60%;
+}
+
+.right-inner-pupil {
+  left: 40%;
+}
+.eyelash {
+  width: 20px;
+  height: 10px;
+  border-bottom-left-radius: 100%;
+  border-bottom: 5px solid black;
+  transform: rotate(25deg);
   position: absolute;
-  z-index: 2;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  transition: all;
-  transition-duration: 200ms;
+  top: -6px;
+  left: -5px;
+  z-index: 4;
 }
