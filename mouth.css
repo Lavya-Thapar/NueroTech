@@ -49,6 +49,11 @@
 .happy .blush {
   background-color: rgba(200, 20, 30, 0.3);
 }
+
+.angry .blush {
+  background-color: rgba(200, 20, 30, 0.3);
+}
+
 .shy .cheeks {
   background: radial-gradient(circle, rgba(224, 101, 181, 0.427));
 }
@@ -80,7 +85,8 @@
   transition: 0.4s all;
 }
 
-.sad .mouth {
+.sad .mouth,
+.angry .mouth {
   border-bottom: none;
   border-top: 3px solid black;
   border-top-left-radius: 50% 70%;

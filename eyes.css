@@ -204,3 +204,10 @@
 .sad .right-eyebrow {
   transform: rotate(8deg);
 }
+
+.angry .left-eyebrow {
+  transform: rotate(20deg);
+}
+.angry .right-eyebrow {
+  transform: rotate(-20deg);
+}
