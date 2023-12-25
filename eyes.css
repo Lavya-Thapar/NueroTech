@@ -193,5 +193,14 @@
 }
 .shy .face.eyes-shut .left-eyebrow,
 .shy .face.eyes-shut .right-eyebrow {
-  transform: translateY(5px); /* Adjust the vertical position when eyes are shut */
+  transform: translateY(
+    5px
+  ); /* Adjust the vertical position when eyes are shut */
+}
+
+.sad .left-eyebrow {
+  transform: rotate(-8deg);
+}
+.sad .right-eyebrow {
+  transform: rotate(8deg);
 }

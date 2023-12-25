@@ -40,7 +40,7 @@
   border-bottom-left-radius: 50% 70%;
   border-bottom-right-radius: 50% 70%;
 }
-.shy .mouth{
+.shy .mouth {
   width: 23%;
   height: 33px;
   border-bottom-left-radius: 50% 70%;
@@ -59,7 +59,7 @@
   height: 30px;
   border-radius: 30%;
   background: radial-gradient(circle, rgba(225, 102, 182, 0.427), transparent);
- /* Light pink color for the blush */
+  /* Light pink color for the blush */
   position: absolute;
 }
 
@@ -80,9 +80,10 @@
   transition: 0.4s all;
 }
 
-.sad .mouth{
-  width: 23%;
-  height: 33px;
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 20%;
+.sad .mouth {
+  border-bottom: none;
+  border-top: 3px solid black;
+  border-top-left-radius: 50% 70%;
+  border-top-right-radius: 50% 70%;
+  transform: translateY(20px);
 }
