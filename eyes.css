@@ -188,3 +188,6 @@
 }
 
 /* ******  EXPRESSIONS  ****** */
+.happy .eyebrow {
+  transform: translateY(-5px);
+}

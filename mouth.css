@@ -9,7 +9,36 @@
   border-bottom: 3px solid black;
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
+  transition: 300ms;
+}
+
+.blush {
+  width: 80px;
+  height: 60px;
+  position: absolute;
+  background-color: transparent;
+  transition: background-color 300ms ease;
+}
+
+.blush-left {
+  left: 20px;
+  top: 50%;
+  border-radius: 100%;
+}
+
+.blush-right {
+  right: 20px;
+  top: 50%;
+  border-radius: 100%;
 }
 
 /* Main Styling */
 /* ******  EXPRESSIONS  ****** */
+.happy .mouth {
+  width: 33%;
+  height: 33px;
+}
+
+.happy .blush {
+  background-color: rgba(200, 20, 30, 0.3);
+}
