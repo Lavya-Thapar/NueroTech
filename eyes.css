@@ -191,3 +191,7 @@
 .happy .eyebrow {
   transform: translateY(-5px);
 }
+.shy .face.eyes-shut .left-eyebrow,
+.shy .face.eyes-shut .right-eyebrow {
+  transform: translateY(5px); /* Adjust the vertical position when eyes are shut */
+}
