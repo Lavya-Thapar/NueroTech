@@ -3,6 +3,7 @@
 /* Layout */
 
 .mouth {
+  z-index: 1;
   width: 20%;
   height: 20px;
   margin-bottom: 60px;
@@ -13,22 +14,22 @@
 }
 
 .blush {
-  width: 80px;
-  height: 60px;
+  width: 50px;
+  height: 30px;
   position: absolute;
   background-color: transparent;
   transition: background-color 300ms ease;
 }
 
 .blush-left {
-  left: 20px;
-  top: 50%;
+  left: 30px;
+  top: 55%;
   border-radius: 100%;
 }
 
 .blush-right {
-  right: 20px;
-  top: 50%;
+  right: 30px;
+  top: 55%;
   border-radius: 100%;
 }
 
