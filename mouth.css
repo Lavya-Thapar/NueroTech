@@ -22,13 +22,13 @@
 }
 
 .blush-left {
-  left: 30px;
+  left: 40px;
   top: 55%;
   border-radius: 100%;
 }
 
 .blush-right {
-  right: 30px;
+  right: 40px;
   top: 55%;
   border-radius: 100%;
 }
@@ -36,11 +36,24 @@
 /* Main Styling */
 /* ******  EXPRESSIONS  ****** */
 .happy .mouth {
-  width: 33%;
-  height: 33px;
-  border-bottom-left-radius: 50% 70%;
-  border-bottom-right-radius: 50% 70%;
+  width: 70px;
+  height: 30px;
+  border: none;
+  border-radius: 20% 20% 100% 80% / 20% 20% 100% 80%;
+  background-color: #824952;
+  overflow: hidden;
+  position: relative;
 }
+
+.happy .tongue {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  border-radius: 30% 30% 0 0 / 30% 30% 0 0;
+  height: 50px;
+  background-color: #c58188;
+}
+
 .shy .mouth {
   width: 23%;
   height: 33px;
