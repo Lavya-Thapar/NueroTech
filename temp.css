@@ -18,7 +18,7 @@ body {
 
 .expr {
   position: fixed;
-  bottom: 15px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -42,6 +42,11 @@ button:hover {
   background-color: rgba(200, 100, 100, 0.9);
   color: white;
   cursor: pointer;
+}
+
+#kbd-btn {
+  position: absolute;
+  bottom: 20px;
 }
 
 /* Face styling */
