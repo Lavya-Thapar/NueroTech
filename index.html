@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./mouth.css" />
     <!-- Temporary styles to be removed later-->
     <link rel="stylesheet" href="./temp.css" />
+    <link rel="stylesheet" href="keyboard.css" />
     <!-- script which might be replaced later -->
     <script src="./script.js" defer></script>
   </head>
@@ -19,27 +20,15 @@
     <main>
       <!-- Face -->
       <div class="face">
-        <div class="upper-face"></div>
         <div class="middle-face"></div>
-        <div class="lower-face">
-          <div class="lower-face-1"></div>
-          <div class="lower-face-2"></div>
-        </div>
-        <div class="cheek-left"></div>
-        <div class="cheek-right"></div>
-        <div class="z-cheek-left"></div>
-        <div class="z-cheek-right"></div>
+        <div class="lower-face"></div>
         <!-- Hair -->
         <div class="hair-bun"></div>
         <div class="hair-bangs-1"></div>
         <div class="hair-bangs-2"></div>
-        <div class="hair-void-1"></div>
         <div class="hair-bangs-3"></div>
         <div class="hair-bangs-4"></div>
         <div class="hair-bangs-5"></div>
-        <div class="hair-bangs-6"></div>
-        <div class="hair-bangs-7"></div>
-        <div class="hair-bangs-8"></div>
 
         <!-- Braids -->
         <div class="braid-left-1"></div>
@@ -94,9 +83,7 @@
         </div>
 
         <!-- Mouth -->
-        <div class="mouth">
-          <div class="tongue"></div>
-        </div>
+        <div class="mouth"></div>
 
         <div class="blush blush-left"></div>
         <div class="blush blush-right"></div>
@@ -112,5 +99,83 @@
       <button class="expr-btn" id="neutral">Neutral</button>
       <button class="expr-btn" id="shy">Shy</button>
     </div>
+
+    <!-- Virtual Keyboard -->
+    <button id="kbd-btn">Open Keyboard</button>
+
+    <div class="keyboard close">
+      <div class="r1">
+        <div class="tilde backtick small-key">`</div>
+        <div class="one exclamation">1</div>
+        <div class="two at">2</div>
+        <div class="three hash">3</div>
+        <div class="four dollar">4</div>
+        <div class="five percent">5</div>
+        <div class="six hat">6</div>
+        <div class="seven and">7</div>
+        <div class="eight star">8</div>
+        <div class="nine leftp">9</div>
+        <div class="zero rightp">0</div>
+        <div class="minus dash">-</div>
+        <div class="equals plus">=</div>
+        <div class="backspace">&lt;-</div>
+      </div>
+      <div class="r2">
+        <div class="tab">Tab</div>
+        <div class="q">q</div>
+        <div class="w">w</div>
+        <div class="e">e</div>
+        <div class="r">r</div>
+        <div class="t">t</div>
+        <div class="y">y</div>
+        <div class="u">u</div>
+        <div class="i">i</div>
+        <div class="o">o</div>
+        <div class="p">p</div>
+        <div class="leftc lefts">[</div>
+        <div class="rightc rights">]</div>
+        <div class="backslash bar">\</div>
+      </div>
+      <div class="r3">
+        <div class="capslock medium-key">Caps</div>
+        <div class="a">a</div>
+        <div class="s">s</div>
+        <div class="d">d</div>
+        <div class="f">f</div>
+        <div class="g">g</div>
+        <div class="h">h</div>
+        <div class="j">j</div>
+        <div class="k">k</div>
+        <div class="l">l</div>
+        <div class="semi-colon colon">;</div>
+        <div class="quote dbquote">&quot;</div>
+        <div class="enter medium-key">Enter</div>
+      </div>
+      <div class="r4">
+        <div class="lshift medium-key">Shift</div>
+        <div class="z">z</div>
+        <div class="x">x</div>
+        <div class="c">c</div>
+        <div class="v">v</div>
+        <div class="b">b</div>
+        <div class="n">n</div>
+        <div class="m">m</div>
+        <div class="comma lt">,</div>
+        <div class="dot rt">.</div>
+        <div class="slash question">/</div>
+        <div class="uparr">u</div>
+      </div>
+      <div class="r5">
+        <div class="lctrl">ctrl</div>
+        <div class="lalt">alt</div>
+        <div class="space long-key">space</div>
+        <div class="rctrl">ctrl</div>
+        <div class="ralt">alt</div>
+        <div class="leftarr">l</div>
+        <div class="downarr">d</div>
+        <div class="rightarr">r</div>
+      </div>
+    </div>
+    <script src="./keyboard.js" defer></script>
   </body>
 </html>
