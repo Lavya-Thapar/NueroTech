@@ -52,3 +52,23 @@
 .long-key {
   flex: 6;
 }
+
+.cursor {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border: 3px solid rgba(100, 0, 0);
+  border-radius: 100%;
+}
+
+.cursor-control {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.cursor-control * {
+  margin: 2px 0;
+}
