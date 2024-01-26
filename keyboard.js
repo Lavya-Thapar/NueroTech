@@ -1,6 +1,7 @@
 // CURSOR
 // cursor movement per key press
-const CURSOR_SPEED = 10;
+const CURSOR_SPEED_Y = 40;
+
 // run key detection loop after how many milliseconds
 const POLL_TIMER = 500;
 
@@ -13,28 +14,55 @@ let isCapsPressed = false;
 class Cursor {
   constructor() {
     this.element = document.getElementById("cursor");
-    this.element.style.top = `${window.innerHeight * (11 / 16)}px`;
-    this.element.style.left = `${window.innerWidth / 2}px`;
+    this.speedX = document.getElementsByClassName("six")[0].clientWidth + 10;
+    this.element.style.top = `${window.innerHeight * (3 / 4)}px`;
+    this.element.style.left = `${
+      window.innerWidth / 2 + this.element.clientWidth / 2
+    }px`;
   }
   moveDown() {
-    this.element.style.top = `${
-      Number.parseFloat(this.element.style.top.slice(0, -2)) + CURSOR_SPEED
-    }px`;
+    let new_y =
+      Number.parseFloat(this.element.style.top.slice(0, -2)) + CURSOR_SPEED_Y;
+    const kb = document
+      .getElementsByClassName("keyboard")[0]
+      .getBoundingClientRect();
+    if (new_y > kb.bottom) {
+      return;
+    }
+    this.element.style.top = `${new_y}px`;
   }
   moveLeft() {
-    this.element.style.left = `${
-      Number.parseFloat(this.element.style.left.slice(0, -2)) - CURSOR_SPEED
-    }px`;
+    let new_x =
+      Number.parseFloat(this.element.style.left.slice(0, -2)) - this.speedX;
+    const kb = document
+      .getElementsByClassName("keyboard")[0]
+      .getBoundingClientRect();
+    if (new_x < kb.left) {
+      return;
+    }
+    this.element.style.left = `${new_x}px`;
   }
   moveRight() {
-    this.element.style.left = `${
-      Number.parseFloat(this.element.style.left.slice(0, -2)) + CURSOR_SPEED
-    }px`;
+    let new_x =
+      Number.parseFloat(this.element.style.left.slice(0, -2)) + this.speedX;
+    const kb = document
+      .getElementsByClassName("keyboard")[0]
+      .getBoundingClientRect();
+    if (new_x > kb.right) {
+      return;
+    }
+    this.element.style.left = `${new_x}px`;
   }
   moveUp() {
-    this.element.style.top = `${
-      Number.parseFloat(this.element.style.top.slice(0, -2)) - CURSOR_SPEED
-    }px`;
+    let new_y =
+      Number.parseFloat(this.element.style.top.slice(0, -2)) - CURSOR_SPEED_Y;
+    const kb = document
+      .getElementsByClassName("keyboard")[0]
+      .getBoundingClientRect();
+    if (new_y < kb.top) {
+      return;
+    }
+    this.element.style.top = `${new_y}px`;
   }
 }
 
@@ -53,7 +81,6 @@ r_c.addEventListener("click", () => cursor.moveRight());
 
 class Keyboard {
   keys_by_classes = [
-    "tilde",
     "one",
     "two",
     "three",
@@ -64,10 +91,7 @@ class Keyboard {
     "eight",
     "nine",
     "zero",
-    "minus",
-    "equals",
     "backspace",
-    "tab",
     "q",
     "w",
     "e",
@@ -78,10 +102,7 @@ class Keyboard {
     "i",
     "o",
     "p",
-    "leftc",
-    "rightc",
-    "backslash",
-    "capslock",
+    "extras",
     "a",
     "s",
     "d",
@@ -91,10 +112,8 @@ class Keyboard {
     "j",
     "k",
     "l",
-    "semi",
-    "quote",
-    "enter",
-    "shift",
+    "at",
+    "world",
     "z",
     "x",
     "c",
@@ -104,15 +123,12 @@ class Keyboard {
     "m",
     "comma",
     "dot",
-    "slash",
-    "uparr",
-    "lctrl",
-    "lalt",
-    "space",
-    "rctrl",
-    "ralt",
+    "com",
+    "shift",
+    "settings",
+    "space long-key",
+    "medium-key",
     "leftarr",
-    "downarr",
     "rightarr",
   ];
   constructor() {
@@ -188,23 +204,13 @@ function getKeyPress(key, isClicked) {
       return;
     }
 
-    if (
-      key.classList.contains("enter") ||
-      key.classList.contains("tab") ||
-      key.classList.contains("ctrl") ||
-      key.classList.contains("alt")
-    ) {
-      // do nothing as of now
+    if (key.classList.contains("space")) {
+      inp.value += " ";
       return;
     }
 
     if (key.classList.contains("shift")) {
       shiftIsPressed = !shiftIsPressed;
-      return;
-    }
-
-    if (key.classList.contains("capslock")) {
-      isCapsPressed = !isCapsPressed;
       return;
     }
 
