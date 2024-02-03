@@ -128,7 +128,7 @@
         <div class="i">i</div>
         <div class="o">o</div>
         <div class="p">p</div>
-        <div class="extras">!#1</div>
+        <div class="extras" style="font-size: 1rem">!#1</div>
       </div>
       <div class="r3">
         <div class="a">a</div>
@@ -141,7 +141,9 @@
         <div class="k">k</div>
         <div class="l">l</div>
         <div class="at">@</div>
-        <div class="world">&nbsp;</div>
+        <div class="world">
+          <img src="./assets/world.svg" style="width: 100%; height: 70%" />
+        </div>
       </div>
       <div class="r4">
         <div class="z">z</div>
@@ -153,13 +155,15 @@
         <div class="m">m</div>
         <div class="comma">,</div>
         <div class="dot">.</div>
-        <div class="com">&nbsp;</div>
+        <div class="com" style="font-size: 1rem">.com</div>
         <div class="shift">⇧</div>
       </div>
       <div class="r5">
-        <div class="settings">&nbsp;</div>
+        <div class="settings">
+          <img src="./assets/settings.svg" style="width: 100%; height: 80%" />
+        </div>
         <div class="space long-key">space</div>
-        <div class="medium-key">Done</div>
+        <div class="medium-key done">done</div>
         <div class="leftarr">←</div>
         <div class="rightarr">→</div>
       </div>
@@ -168,11 +172,11 @@
     <div class="cursor" id="cursor"></div>
     <!-- Buttons to move cursor -->
     <div class="cursor-control">
-      <button id="left">←</button>
-      <button id="right">→</button>
-      <button id="down">↓</button>
-      <button id="up">↑</button>
-      <button id="press">Press</button>
+      <button id="up" style="font-size: 1.5rem">↑</button>
+      <button id="down" style="font-size: 1.5rem">↓</button>
+      <button id="left" style="font-size: 1.5rem">←</button>
+      <button id="right" style="font-size: 1.5rem">→</button>
+      <button id="press" style="font-size: 1.5rem">Press</button>
     </div>
     <!-- Input field to show characters which have been entered -->
     <input id="inp" />
