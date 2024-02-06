@@ -15,10 +15,13 @@ class Cursor {
   constructor() {
     this.element = document.getElementById("cursor");
     this.speedX = document.getElementsByClassName("six")[0].clientWidth + 10;
-    this.element.style.top = `${window.innerHeight * (3 / 4)}px`;
-    this.element.style.left = `${
-      window.innerWidth / 2 + this.element.clientWidth / 2
+    this.element.style.top = `${
+      document.getElementsByClassName("six")[0].getBoundingClientRect().top +
+      document.getElementsByClassName("six")[0].getBoundingClientRect().width /
+        2 -
+      this.element.clientHeight
     }px`;
+    this.element.style.left = `${window.innerWidth / 2}px`;
   }
   moveDown() {
     let new_y =
@@ -214,6 +217,19 @@ function getKeyPress(key, isClicked) {
       return;
     }
 
+    if (
+      key.classList.contains("backspace") ||
+      key.classList.contains("extras") ||
+      key.classList.contains("world") ||
+      key.classList.contains("shift") ||
+      key.classList.contains("settings") ||
+      key.classList.contains("done") ||
+      key.classList.contains("com") ||
+      key.classList.contains("leftarr") ||
+      key.classList.contains("rightarr")
+    ) {
+      return;
+    }
     // any letter/number/symbol key
     if (shiftIsPressed || isCapsPressed) {
       // currently we are not focussing on extra special characters accessible only using shift
